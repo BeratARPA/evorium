@@ -1,0 +1,69 @@
+name: evorium
+description: "Evorium - Roguelite Evolution Simulation / Strategy"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Data Classes & Serialization
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Navigation
+  go_router: ^14.6.2
+
+  # Dependency Injection
+  get_it: ^8.0.3
+
+  # ARE Engine (Event-Rule-Action)
+  are_engine_core: ^1.0.2
+
+  # Storage
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.3.3
+  path_provider: ^2.1.5
+
+  # UI / Rendering
+  flutter_animate: ^4.5.2
+  lottie: ^3.2.0
+  flutter_svg: ^2.0.10
+  google_fonts: ^6.2.1
+  gap: ^3.0.1
+
+  # Audio & Haptics
+  audioplayers: ^6.1.0
+  vibration: ^2.0.0
+
+  # Utilities
+  uuid: ^4.5.1
+  equatable: ^2.0.7
+  collection: ^1.19.1
+  logger: ^2.5.0
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.13
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+  mockito: ^5.4.5
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+    - assets/images/
+    - assets/audio/
+    - assets/animations/

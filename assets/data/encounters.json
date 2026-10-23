@@ -1,0 +1,324 @@
+[
+  {
+    "id": "shadow_predator",
+    "type": "predator",
+    "title": "Shadow Hunter",
+    "description": "A larger predator emerges from the depths, drawn by the chemical trail you've left behind. It circles slowly, waiting to strike.",
+    "statWeights": { "atk": 0.4, "def": 0.3, "spd": 0.3 },
+    "choices": [
+      { "id": "fight", "label": "Fight Back", "primaryStat": "atk", "icon": "⚔️" },
+      { "id": "flee", "label": "Escape", "primaryStat": "spd", "icon": "💨" },
+      { "id": "endure", "label": "Armor Up", "primaryStat": "def", "icon": "🛡️" }
+    ],
+    "traitBonusIds": ["shell", "spikes", "regeneration"],
+    "minStage": 0
+  },
+  {
+    "id": "apex_hunter",
+    "type": "predator",
+    "title": "Apex Predator",
+    "description": "The largest organism you've seen locks onto you. Its bio-electric senses have already mapped your location — there is no hiding.",
+    "statWeights": { "atk": 0.35, "def": 0.35, "spd": 0.3 },
+    "choices": [
+      { "id": "strike", "label": "Desperate Strike", "primaryStat": "atk", "icon": "⚔️" },
+      { "id": "flee", "label": "Flee Into Crevice", "primaryStat": "spd", "icon": "💨" },
+      { "id": "camouflage", "label": "Thermal Camouflage", "primaryStat": "adp", "icon": "🫥", "requiredTraitId": "camouflage" }
+    ],
+    "traitBonusIds": ["exoskeleton", "spikes", "regeneration"],
+    "minStage": 1
+  },
+  {
+    "id": "venomous_predator",
+    "type": "predator",
+    "title": "Venomous Stalker",
+    "description": "A creature coated in toxic secretions closes in. Every wound it inflicts carries a lingering cost.",
+    "statWeights": { "def": 0.4, "adp": 0.35, "spd": 0.25 },
+    "choices": [
+      { "id": "resist", "label": "Resist the Venom", "primaryStat": "adp", "icon": "🧬" },
+      { "id": "outrun", "label": "Outrun It", "primaryStat": "spd", "icon": "💨" },
+      { "id": "block", "label": "Shell Block", "primaryStat": "def", "icon": "🛡️" }
+    ],
+    "traitBonusIds": ["shell", "regeneration", "camouflage"],
+    "minStage": 1
+  },
+  {
+    "id": "pack_predator",
+    "type": "predator",
+    "title": "Predator Pack",
+    "description": "Three coordinated hunters circle you. They move in synchronized patterns — one flanks while the others drive you back.",
+    "statWeights": { "per": 0.4, "spd": 0.35, "atk": 0.25 },
+    "choices": [
+      { "id": "counter_ambush", "label": "Counter Ambush", "primaryStat": "per", "icon": "👁️" },
+      { "id": "scatter", "label": "Break Formation", "primaryStat": "atk", "icon": "💥" },
+      { "id": "retreat", "label": "Tactical Retreat", "primaryStat": "spd", "icon": "💨" }
+    ],
+    "traitBonusIds": ["compound_eye", "echolocation", "pack_hunting"],
+    "minStage": 2
+  },
+  {
+    "id": "electric_predator",
+    "type": "predator",
+    "title": "Electric Leviathan",
+    "description": "A massive organism crackles with bio-electric energy. Its shock pulses through the water, disorienting prey before the kill.",
+    "statWeights": { "adp": 0.4, "def": 0.3, "per": 0.3 },
+    "choices": [
+      { "id": "ground", "label": "Ground the Charge", "primaryStat": "adp", "icon": "🌍" },
+      { "id": "evade", "label": "Erratic Movement", "primaryStat": "spd", "icon": "⚡" },
+      { "id": "armor", "label": "Insulate with Shell", "primaryStat": "def", "icon": "🛡️" }
+    ],
+    "traitBonusIds": ["electric_discharge", "magnetic_sense", "shell"],
+    "minStage": 2
+  },
+  {
+    "id": "small_prey",
+    "type": "hunt",
+    "title": "Nutrient Cluster",
+    "description": "A dense cluster of micro-organisms drifts by, rich in organic compounds. A perfect opportunity to feed — if you can catch it.",
+    "statWeights": { "spd": 0.5, "per": 0.3, "atk": 0.2 },
+    "choices": [
+      { "id": "chase", "label": "Give Chase", "primaryStat": "spd", "icon": "🎯" },
+      { "id": "ambush", "label": "Set an Ambush", "primaryStat": "per", "icon": "👁️" },
+      { "id": "lunge", "label": "Lunge Attack", "primaryStat": "atk", "icon": "💥" }
+    ],
+    "traitBonusIds": ["lateral_line", "filter_feeding", "claws"],
+    "minStage": 0
+  },
+  {
+    "id": "schooling_prey",
+    "type": "hunt",
+    "title": "Prey Swarm",
+    "description": "A massive swarm of small organisms moves past in coordinated patterns. Breaking through their defensive formation requires precision.",
+    "statWeights": { "per": 0.45, "spd": 0.35, "atk": 0.2 },
+    "choices": [
+      { "id": "scatter", "label": "Scatter the Swarm", "primaryStat": "atk", "icon": "💥" },
+      { "id": "track", "label": "Track a Straggler", "primaryStat": "per", "icon": "👁️" },
+      { "id": "intercept", "label": "Intercept Movement", "primaryStat": "spd", "icon": "⚡" }
+    ],
+    "traitBonusIds": ["echolocation", "compound_eye", "pack_hunting"],
+    "minStage": 0
+  },
+  {
+    "id": "large_prey",
+    "type": "hunt",
+    "title": "Mega Prey",
+    "description": "A creature twice your size grazes nearby. It's slow and unaware — but a single mistake will trigger a deadly counter-attack.",
+    "statWeights": { "atk": 0.4, "per": 0.35, "spd": 0.25 },
+    "choices": [
+      { "id": "stalk", "label": "Stalk and Strike", "primaryStat": "per", "icon": "🎯" },
+      { "id": "full_assault", "label": "Full Assault", "primaryStat": "atk", "icon": "⚔️" },
+      { "id": "venom_strike", "label": "Venom Strike", "primaryStat": "adp", "icon": "🧪", "requiredTraitId": "poison_gland" }
+    ],
+    "traitBonusIds": ["claws", "venom_fangs", "heat_sense"],
+    "minStage": 1
+  },
+  {
+    "id": "injured_prey",
+    "type": "hunt",
+    "title": "Wounded Prey",
+    "description": "A visibly weakened organism leaves a chemical trail. An easy opportunity — but the scent may attract other predators.",
+    "statWeights": { "spd": 0.4, "atk": 0.4, "per": 0.2 },
+    "choices": [
+      { "id": "quick_kill", "label": "Quick Kill", "primaryStat": "atk", "icon": "⚔️" },
+      { "id": "chase_down", "label": "Chase Down", "primaryStat": "spd", "icon": "💨" },
+      { "id": "read_trail", "label": "Read the Chemical Trail", "primaryStat": "per", "icon": "🔬" }
+    ],
+    "traitBonusIds": ["carnivorous_digestion", "claws", "compound_eye"],
+    "minStage": 0
+  },
+  {
+    "id": "toxic_bloom",
+    "type": "environmental",
+    "title": "Toxic Bloom",
+    "description": "A massive algae bloom releases concentrated toxins. The water turns dark. Every second in this zone drains your reserves.",
+    "statWeights": { "adp": 0.5, "def": 0.3, "spd": 0.2 },
+    "choices": [
+      { "id": "adapt", "label": "Metabolize Toxins", "primaryStat": "adp", "icon": "🧬" },
+      { "id": "shield", "label": "Membrane Defense", "primaryStat": "def", "icon": "🛡️" },
+      { "id": "escape", "label": "Swim Clear", "primaryStat": "spd", "icon": "💨" }
+    ],
+    "traitBonusIds": ["regeneration", "spore_release", "chemosynthesis"],
+    "minStage": 0
+  },
+  {
+    "id": "hydrothermal_surge",
+    "type": "environmental",
+    "title": "Thermal Surge",
+    "description": "A nearby hydrothermal vent erupts violently. Superheated fluid and mineral particulates engulf the area.",
+    "statWeights": { "adp": 0.4, "spd": 0.35, "def": 0.25 },
+    "choices": [
+      { "id": "endure", "label": "Thermal Resistance", "primaryStat": "adp", "icon": "🔥" },
+      { "id": "flee", "label": "Rapid Retreat", "primaryStat": "spd", "icon": "💨" },
+      { "id": "shelter", "label": "Find Shelter", "primaryStat": "per", "icon": "🔍" }
+    ],
+    "traitBonusIds": ["chemosynthesis", "exoskeleton", "regeneration"],
+    "minStage": 0
+  },
+  {
+    "id": "earthquake_event",
+    "type": "environmental",
+    "title": "Seismic Event",
+    "description": "The ground shakes violently. Boulders crash, fissures open, and debris rains from above.",
+    "statWeights": { "spd": 0.45, "adp": 0.3, "def": 0.25 },
+    "choices": [
+      { "id": "flee_quake", "label": "Flee the Zone", "primaryStat": "spd", "icon": "💨" },
+      { "id": "brace", "label": "Brace for Impact", "primaryStat": "def", "icon": "🛡️" },
+      { "id": "navigate", "label": "Navigate Debris", "primaryStat": "adp", "icon": "🧬" }
+    ],
+    "traitBonusIds": ["wings", "limbs", "magnetic_sense"],
+    "minStage": 2
+  },
+  {
+    "id": "drought_crisis",
+    "type": "environmental",
+    "title": "Drying Waters",
+    "description": "The water level drops rapidly. Resources concentrate — but so do competitors and predators.",
+    "statWeights": { "adp": 0.5, "per": 0.3, "spd": 0.2 },
+    "choices": [
+      { "id": "adapt_drought", "label": "Physiological Adapt", "primaryStat": "adp", "icon": "🧬" },
+      { "id": "dominate", "label": "Dominate Remaining Zone", "primaryStat": "atk", "icon": "⚔️" },
+      { "id": "migrate_away", "label": "Find New Territory", "primaryStat": "spd", "icon": "💨" }
+    ],
+    "traitBonusIds": ["filter_feeding", "photosynthesis", "chemosynthesis"],
+    "minStage": 1
+  },
+  {
+    "id": "ancient_relic",
+    "type": "discovery",
+    "title": "Ancient Structure",
+    "description": "You detect an unusual mineral formation with traces of complex organic chemistry. Something ancient and strange lies within.",
+    "statWeights": { "per": 0.5, "adp": 0.3, "spd": 0.2 },
+    "choices": [
+      { "id": "analyze", "label": "Absorb Compounds", "primaryStat": "per", "icon": "🔬" },
+      { "id": "explore", "label": "Explore Deeper", "primaryStat": "adp", "icon": "🌀" },
+      { "id": "mark", "label": "Mark and Return", "primaryStat": "spd", "icon": "📍" }
+    ],
+    "traitBonusIds": ["compound_eye", "magnetic_sense", "lateral_line"],
+    "minStage": 0
+  },
+  {
+    "id": "new_biome_edge",
+    "type": "discovery",
+    "title": "Biome Boundary",
+    "description": "You reach the edge of a new environment. Strange sensory inputs suggest this territory offers new resources — but also new dangers.",
+    "statWeights": { "per": 0.4, "adp": 0.4, "spd": 0.2 },
+    "choices": [
+      { "id": "observe", "label": "Observe and Learn", "primaryStat": "per", "icon": "👁️" },
+      { "id": "adapt_probe", "label": "Test Adaptation", "primaryStat": "adp", "icon": "🧬" },
+      { "id": "scout", "label": "Quick Scout", "primaryStat": "spd", "icon": "💨" }
+    ],
+    "traitBonusIds": ["echolocation", "heat_sense", "magnetic_sense"],
+    "minStage": 1
+  },
+  {
+    "id": "evolutionary_anomaly",
+    "type": "discovery",
+    "title": "Evolutionary Echo",
+    "description": "Genetic material from a long-extinct lineage drifts through the medium. Absorbing it could trigger a leap forward — or backward.",
+    "statWeights": { "adp": 0.5, "per": 0.3, "def": 0.2 },
+    "choices": [
+      { "id": "absorb_genes", "label": "Absorb Genetic Material", "primaryStat": "adp", "icon": "🧬" },
+      { "id": "analyze_genes", "label": "Analyze Before Absorbing", "primaryStat": "per", "icon": "🔬" },
+      { "id": "ignore_genes", "label": "Avoid Contamination", "primaryStat": "def", "icon": "🛡️" }
+    ],
+    "traitBonusIds": ["magnetic_sense", "compound_eye", "chemosynthesis"],
+    "minStage": 2
+  },
+  {
+    "id": "lost_species",
+    "type": "discovery",
+    "title": "Relic Organism",
+    "description": "An ancient species, virtually unchanged for millions of years, appears before you. It holds biological secrets lost to time.",
+    "statWeights": { "per": 0.45, "adp": 0.35, "atk": 0.2 },
+    "choices": [
+      { "id": "study_it", "label": "Observe Its Patterns", "primaryStat": "per", "icon": "👁️" },
+      { "id": "engage_it", "label": "Engage Cautiously", "primaryStat": "atk", "icon": "🤝" },
+      { "id": "learn_adp", "label": "Mimic Its Adaptation", "primaryStat": "adp", "icon": "🧬" }
+    ],
+    "traitBonusIds": ["bioluminescence", "lateral_line", "pheromone"],
+    "minStage": 2
+  },
+  {
+    "id": "symbiotic_bacteria",
+    "type": "symbiosis",
+    "title": "Mutualist Colony",
+    "description": "A colony of microorganisms signals chemical compatibility. Accepting them could provide metabolic benefits — or introduce a risk.",
+    "statWeights": { "adp": 0.5, "per": 0.3, "def": 0.2 },
+    "choices": [
+      { "id": "accept", "label": "Accept the Colony", "primaryStat": "adp", "icon": "🤝" },
+      { "id": "analyze_sym", "label": "Test Compatibility", "primaryStat": "per", "icon": "🔬" },
+      { "id": "reject", "label": "Reject Contact", "primaryStat": "def", "icon": "🛡️" }
+    ],
+    "traitBonusIds": ["pheromone", "filter_feeding", "chemosynthesis"],
+    "minStage": 0
+  },
+  {
+    "id": "parasitic_infection",
+    "type": "symbiosis",
+    "title": "Parasitic Approach",
+    "description": "An organism latches on, presenting chemicals of cooperation — but its morphology suggests parasitism.",
+    "statWeights": { "def": 0.4, "adp": 0.35, "per": 0.25 },
+    "choices": [
+      { "id": "immune_response", "label": "Immune Response", "primaryStat": "def", "icon": "🛡️" },
+      { "id": "metabolize", "label": "Co-opt the Parasite", "primaryStat": "adp", "icon": "🧬" },
+      { "id": "detect", "label": "Signal Identification", "primaryStat": "per", "icon": "👁️" }
+    ],
+    "traitBonusIds": ["regeneration", "exoskeleton", "spore_release"],
+    "minStage": 0
+  },
+  {
+    "id": "mutual_benefit",
+    "type": "symbiosis",
+    "title": "Symbiotic Network",
+    "description": "A network of organisms offers chemical communication. Joining it would provide constant awareness of threats.",
+    "statWeights": { "per": 0.45, "adp": 0.35, "spd": 0.2 },
+    "choices": [
+      { "id": "join_network", "label": "Join the Network", "primaryStat": "per", "icon": "🌐" },
+      { "id": "partial_link", "label": "Partial Integration", "primaryStat": "adp", "icon": "🔗" },
+      { "id": "observe_only", "label": "Observe from Outside", "primaryStat": "spd", "icon": "👁️" }
+    ],
+    "traitBonusIds": ["pheromone", "bioluminescence", "herd_instinct"],
+    "minStage": 2
+  },
+  {
+    "id": "resource_rival",
+    "type": "competition",
+    "title": "Resource Rival",
+    "description": "Another organism of similar size is feeding at the same nutrient node. The resource can only sustain one of you.",
+    "statWeights": { "atk": 0.35, "spd": 0.35, "per": 0.3 },
+    "choices": [
+      { "id": "intimidate", "label": "Intimidate", "primaryStat": "atk", "icon": "😤" },
+      { "id": "outmaneuver", "label": "Outmaneuver", "primaryStat": "spd", "icon": "⚡" },
+      { "id": "read_rival", "label": "Read Its Behavior", "primaryStat": "per", "icon": "👁️" }
+    ],
+    "traitBonusIds": ["spikes", "pack_hunting", "compound_eye"],
+    "minStage": 0
+  },
+  {
+    "id": "territory_clash",
+    "type": "competition",
+    "title": "Territory Clash",
+    "description": "You have entered another creature's claimed zone. It moves to push you out. Establish dominance or cede the territory.",
+    "statWeights": { "atk": 0.4, "def": 0.3, "adp": 0.3 },
+    "choices": [
+      { "id": "challenge", "label": "Challenge for Territory", "primaryStat": "atk", "icon": "⚔️" },
+      { "id": "hold_ground", "label": "Hold Ground", "primaryStat": "def", "icon": "🛡️" },
+      { "id": "negotiate", "label": "Signal Submission", "primaryStat": "adp", "icon": "✋" }
+    ],
+    "traitBonusIds": ["pack_hunting", "spikes", "bioluminescence"],
+    "minStage": 1
+  },
+  {
+    "id": "evolutionary_race",
+    "type": "competition",
+    "title": "Evolutionary Race",
+    "description": "A rival species is exploiting the same ecological niche. Only the better adapted will survive long-term.",
+    "statWeights": { "adp": 0.45, "per": 0.3, "spd": 0.25 },
+    "choices": [
+      { "id": "specialize", "label": "Out-Specialize", "primaryStat": "adp", "icon": "🧬" },
+      { "id": "displace", "label": "Directly Displace", "primaryStat": "atk", "icon": "⚔️" },
+      { "id": "coexist", "label": "Niche Partitioning", "primaryStat": "per", "icon": "🔬" }
+    ],
+    "traitBonusIds": ["chemosynthesis", "regeneration", "magnetic_sense"],
+    "minStage": 2
+  }
+]

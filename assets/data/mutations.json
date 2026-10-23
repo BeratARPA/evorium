@@ -1,0 +1,598 @@
+[
+  {
+    "id": "mut_basic_eye",
+    "name": "Ocular Development",
+    "description": "Primitive light-sensing cells form into basic eyes.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "basic_eye",
+    "requiredStage": "cellular",
+    "statPreview": { "per": 3 }
+  },
+  {
+    "id": "mut_compound_eye",
+    "name": "Compound Eye Evolution",
+    "description": "Basic eye evolves into high-resolution compound eye.",
+    "rarity": "rare",
+    "type": "traitEvolution",
+    "requiredTraitId": "basic_eye",
+    "grantedTraitId": "compound_eye",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 6, "spd": 1 }
+  },
+  {
+    "id": "mut_cilia",
+    "name": "Ciliary Growth",
+    "description": "Hair-like organelles develop for movement.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "cilia",
+    "requiredStage": "cellular",
+    "statPreview": { "spd": 2 }
+  },
+  {
+    "id": "mut_flagellum",
+    "name": "Flagellar Propulsion",
+    "description": "A whip-like tail forms, enabling rapid directional movement.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "flagellum",
+    "requiredStage": "cellular",
+    "statPreview": { "spd": 3, "adp": -1 }
+  },
+  {
+    "id": "mut_fins",
+    "name": "Fin Development",
+    "description": "Paired fins emerge for superior aquatic maneuverability.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "fins",
+    "requiredStage": "multicellular",
+    "statPreview": { "spd": 4, "adp": 2 }
+  },
+  {
+    "id": "mut_limbs",
+    "name": "Limb Emergence",
+    "description": "Jointed appendages break free from the aquatic body plan.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "limbs",
+    "requiredStage": "landTransition",
+    "statPreview": { "spd": 3, "atk": 2, "adp": 1 }
+  },
+  {
+    "id": "mut_wings",
+    "name": "Wing Membrane",
+    "description": "Skin folds between limbs expand into gliding membranes.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "wings",
+    "requiredStage": "landTransition",
+    "statPreview": { "spd": 5, "per": 2, "def": -1 }
+  },
+  {
+    "id": "mut_shell_growth",
+    "name": "Mineralized Shell",
+    "description": "Calcium deposits form a protective outer shell.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "shell",
+    "requiredStage": "cellular",
+    "statPreview": { "def": 5, "hp": 10, "spd": -2 }
+  },
+  {
+    "id": "mut_spikes",
+    "name": "Spike Protrusions",
+    "description": "Hard mineral spikes erupt from the outer surface.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "spikes",
+    "requiredStage": "cellular",
+    "statPreview": { "def": 2, "atk": 2 }
+  },
+  {
+    "id": "mut_camouflage",
+    "name": "Chromatic Cells",
+    "description": "Specialized cells develop color-shifting abilities.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "camouflage",
+    "requiredStage": "multicellular",
+    "statPreview": { "def": 1, "per": 2 }
+  },
+  {
+    "id": "mut_regeneration",
+    "name": "Cellular Regeneration",
+    "description": "Stem cells proliferate, enabling rapid tissue repair.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "regeneration",
+    "requiredStage": "multicellular",
+    "statPreview": { "def": 2, "adp": 4, "hp": 10 }
+  },
+  {
+    "id": "mut_spore_release",
+    "name": "Spore Defense",
+    "description": "Toxic spores form in specialized sacs for defensive release.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "spore_release",
+    "requiredStage": "multicellular",
+    "statPreview": { "def": 3, "adp": 3 }
+  },
+  {
+    "id": "mut_exoskeleton",
+    "name": "Chitinous Exoskeleton",
+    "description": "Tough chitin forms overlapping plates across the body.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "exoskeleton",
+    "requiredStage": "multicellular",
+    "statPreview": { "def": 6, "hp": 8, "spd": -2 }
+  },
+  {
+    "id": "mut_claws",
+    "name": "Claw Formation",
+    "description": "Hardened keratin extensions form lethal rending claws.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "claws",
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 4, "spd": 1 }
+  },
+  {
+    "id": "mut_poison",
+    "name": "Toxin Production",
+    "description": "Specialized glands produce lethal biochemicals.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "poison_gland",
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 3, "adp": 1 }
+  },
+  {
+    "id": "mut_acid_spray",
+    "name": "Acid Gland",
+    "description": "High-concentration acid is stored in a pressurized gland.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "acid_spray",
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 4 }
+  },
+  {
+    "id": "mut_venom_fangs",
+    "name": "Venom Fangs",
+    "description": "Hollow fangs develop, channeling concentrated venom.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "venom_fangs",
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 5, "spd": 1, "adp": 1 }
+  },
+  {
+    "id": "mut_photosynthesis",
+    "name": "Chloroplast Development",
+    "description": "Symbiotic algae integrate into cell walls, enabling photosynthesis.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "photosynthesis",
+    "requiredStage": "cellular",
+    "statPreview": { "adp": 3 }
+  },
+  {
+    "id": "mut_filter_feeding",
+    "name": "Filter Apparatus",
+    "description": "Specialized membranes filter nutrients directly from water.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "filter_feeding",
+    "requiredStage": "cellular",
+    "statPreview": { "adp": 2, "spd": -1 }
+  },
+  {
+    "id": "mut_carnivore",
+    "name": "Carnivorous Adaptation",
+    "description": "Digestive system reorganizes around protein-rich prey consumption.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "carnivorous_digestion",
+    "requiredStage": "multicellular",
+    "statPreview": { "hp": 8, "atk": 1 }
+  },
+  {
+    "id": "mut_chemosynthesis",
+    "name": "Chemosynthetic Pathway",
+    "description": "Metabolic enzymes adapt to oxidize inorganic compounds for energy.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "chemosynthesis",
+    "requiredStage": "cellular",
+    "statPreview": { "adp": 5, "def": 1 }
+  },
+  {
+    "id": "mut_echolocation",
+    "name": "Sonar Organ",
+    "description": "Specialized cells develop acoustic sensing.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "echolocation",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 5 }
+  },
+  {
+    "id": "mut_lateral_line",
+    "name": "Lateral Line System",
+    "description": "Pressure-sensing canals develop along the body.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "lateral_line",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 3, "spd": 1 }
+  },
+  {
+    "id": "mut_magnetic_sense",
+    "name": "Magnetoreception",
+    "description": "Magnetite crystals form in neural tissue for magnetic navigation.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "magnetic_sense",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 4, "adp": 2 }
+  },
+  {
+    "id": "mut_heat_sense",
+    "name": "Thermal Pit Organs",
+    "description": "Facial pits evolve to detect infrared radiation.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "heat_sense",
+    "requiredStage": "landTransition",
+    "statPreview": { "per": 3, "atk": 1, "adp": 2 }
+  },
+  {
+    "id": "mut_herd_instinct",
+    "name": "Collective Behavior",
+    "description": "Neural circuits wire for group coordination and shared awareness.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "herd_instinct",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 2, "def": 1 }
+  },
+  {
+    "id": "mut_bioluminescence",
+    "name": "Luciferin Production",
+    "description": "Light-emitting organs develop, enabling signaling in darkness.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "bioluminescence",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 3 }
+  },
+  {
+    "id": "mut_pheromone",
+    "name": "Pheromone Glands",
+    "description": "Chemical signaling glands form for complex communication.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "pheromone",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 2, "adp": 1 }
+  },
+  {
+    "id": "mut_pack_hunting",
+    "name": "Pack Coordination",
+    "description": "Neural pathways evolve for cooperative hunting strategies.",
+    "rarity": "epic",
+    "type": "newTrait",
+    "grantedTraitId": "pack_hunting",
+    "requiredStage": "social",
+    "statPreview": { "atk": 4, "spd": 2 }
+  },
+  {
+    "id": "mut_tooth_skeleton",
+    "name": "Dental Calcification",
+    "description": "Mineral deposits harden cellular walls into primitive teeth.",
+    "rarity": "common",
+    "type": "newTrait",
+    "grantedTraitId": "tooth_skeleton",
+    "requiredStage": "cellular",
+    "statPreview": { "atk": 2, "def": 1 }
+  },
+  {
+    "id": "mut_skeleton",
+    "name": "Internal Ossification",
+    "description": "Internal mineral deposits form a supporting skeleton.",
+    "rarity": "rare",
+    "type": "newTrait",
+    "grantedTraitId": "internal_skeleton",
+    "requiredStage": "multicellular",
+    "statPreview": { "def": 3, "hp": 15, "spd": -1 }
+  },
+  {
+    "id": "mut_spd_up",
+    "name": "Metabolic Surge",
+    "description": "Increased cellular energy production boosts speed.",
+    "rarity": "common",
+    "type": "statMutation",
+    "statModifiers": { "spd": 2, "adp": -1 },
+    "requiredStage": "cellular",
+    "statPreview": { "spd": 2, "adp": -1 }
+  },
+  {
+    "id": "mut_atk_up",
+    "name": "Aggressive Growth",
+    "description": "Predatory cells develop enhanced attack capability.",
+    "rarity": "common",
+    "type": "statMutation",
+    "statModifiers": { "atk": 3 },
+    "requiredStage": "cellular",
+    "statPreview": { "atk": 3 }
+  },
+  {
+    "id": "mut_adp_up",
+    "name": "Environmental Resilience",
+    "description": "Better adaptation to extreme conditions.",
+    "rarity": "rare",
+    "type": "statMutation",
+    "statModifiers": { "adp": 4 },
+    "requiredStage": "cellular",
+    "statPreview": { "adp": 4 }
+  },
+  {
+    "id": "mut_def_up",
+    "name": "Membrane Fortification",
+    "description": "Cell walls thicken with reinforced protein layers.",
+    "rarity": "common",
+    "type": "statMutation",
+    "statModifiers": { "def": 3 },
+    "requiredStage": "cellular",
+    "statPreview": { "def": 3 }
+  },
+  {
+    "id": "mut_per_up",
+    "name": "Neural Sensitivity",
+    "description": "Sensory networks enhance detection and awareness.",
+    "rarity": "common",
+    "type": "statMutation",
+    "statModifiers": { "per": 3 },
+    "requiredStage": "cellular",
+    "statPreview": { "per": 3 }
+  },
+  {
+    "id": "mut_hp_up",
+    "name": "Cellular Reinforcement",
+    "description": "Robust cell structures dramatically increase maximum vitality.",
+    "rarity": "common",
+    "type": "statMutation",
+    "statModifiers": { "hp": 15 },
+    "requiredStage": "cellular",
+    "statPreview": { "hp": 15 }
+  },
+  {
+    "id": "mut_atk_def_up",
+    "name": "Combat Specialization",
+    "description": "Simultaneous growth in offensive and defensive capacity.",
+    "rarity": "rare",
+    "type": "statMutation",
+    "statModifiers": { "atk": 3, "def": 2 },
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 3, "def": 2 }
+  },
+  {
+    "id": "mut_spd_per_up",
+    "name": "Predator Reflex",
+    "description": "Enhanced reflexes finely tune perception and movement.",
+    "rarity": "rare",
+    "type": "statMutation",
+    "statModifiers": { "spd": 3, "per": 2 },
+    "requiredStage": "multicellular",
+    "statPreview": { "spd": 3, "per": 2 }
+  },
+  {
+    "id": "mut_adp_hp_up",
+    "name": "Stress Hardening",
+    "description": "Repeated environmental stress builds extreme resilience.",
+    "rarity": "rare",
+    "type": "statMutation",
+    "statModifiers": { "adp": 3, "hp": 12 },
+    "requiredStage": "multicellular",
+    "statPreview": { "adp": 3, "hp": 12 }
+  },
+  {
+    "id": "mut_adp_big",
+    "name": "Extreme Adaptation",
+    "description": "Rapid genetic shifts allow survival in near-lethal conditions.",
+    "rarity": "epic",
+    "type": "statMutation",
+    "statModifiers": { "adp": 7 },
+    "requiredStage": "multicellular",
+    "statPreview": { "adp": 7 }
+  },
+  {
+    "id": "mut_glass_cannon",
+    "name": "Glass Cannon",
+    "description": "All energy diverted to offense — devastating attack, no defense.",
+    "rarity": "epic",
+    "type": "statMutation",
+    "statModifiers": { "atk": 8, "def": -4, "spd": 2 },
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 8, "def": -4, "spd": 2 }
+  },
+  {
+    "id": "mut_iron_wall",
+    "name": "Iron Wall",
+    "description": "Total defensive specialization. Nearly invulnerable but sluggish.",
+    "rarity": "epic",
+    "type": "statMutation",
+    "statModifiers": { "def": 8, "hp": 20, "spd": -4, "atk": -2 },
+    "requiredStage": "multicellular",
+    "statPreview": { "def": 8, "hp": 20, "spd": -4, "atk": -2 }
+  },
+  {
+    "id": "mut_apex_stats",
+    "name": "Apex Maturation",
+    "description": "Full-body optimization: every system refined to peak performance.",
+    "rarity": "legendary",
+    "type": "statMutation",
+    "statModifiers": { "atk": 3, "def": 3, "spd": 3, "per": 3, "adp": 3 },
+    "requiredStage": "social",
+    "statPreview": { "atk": 3, "def": 3, "spd": 3, "per": 3, "adp": 3 }
+  },
+  {
+    "id": "mut_regress_eyes",
+    "name": "Sensory Trade-off",
+    "description": "Eye cells are repurposed for echolocation. Lose eyes, gain sonar.",
+    "rarity": "epic",
+    "type": "regressiveMutation",
+    "removedTraitId": "basic_eye",
+    "grantedTraitId": "echolocation",
+    "requiredStage": "multicellular",
+    "statPreview": { "per": 2 }
+  },
+  {
+    "id": "mut_regress_shell_wings",
+    "name": "Shell Dissolution",
+    "description": "The heavy shell dissolves, freeing the body for aerial evolution.",
+    "rarity": "rare",
+    "type": "regressiveMutation",
+    "removedTraitId": "shell",
+    "grantedTraitId": "wings",
+    "requiredStage": "landTransition",
+    "statPreview": { "spd": 3, "def": -3 }
+  },
+  {
+    "id": "mut_regress_filter_carnivore",
+    "name": "Digestive Overhaul",
+    "description": "Filter-feeding apparatus converts into a carnivore gut.",
+    "rarity": "rare",
+    "type": "regressiveMutation",
+    "removedTraitId": "filter_feeding",
+    "grantedTraitId": "carnivorous_digestion",
+    "requiredStage": "multicellular",
+    "statPreview": { "hp": 6, "atk": 2, "adp": -2 }
+  },
+  {
+    "id": "mut_regress_photo_carnivore",
+    "name": "Predatory Conversion",
+    "description": "Chloroplasts are repurposed into digestive enzymes for prey.",
+    "rarity": "epic",
+    "type": "regressiveMutation",
+    "removedTraitId": "photosynthesis",
+    "grantedTraitId": "carnivorous_digestion",
+    "requiredStage": "multicellular",
+    "statPreview": { "hp": 8, "atk": 3, "adp": -2 }
+  },
+  {
+    "id": "mut_synergy_precise_hunter",
+    "name": "Precision Hunter",
+    "description": "Compound Eye and Carnivorous Digestion combine for lethal accuracy.",
+    "rarity": "epic",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["compound_eye", "carnivorous_digestion"],
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 5, "per": 3 }
+  },
+  {
+    "id": "mut_synergy_venom_electric",
+    "name": "Electrovenom",
+    "description": "Electric discharge and venom fangs merge into a lethal paralytic combo.",
+    "rarity": "legendary",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["electric_discharge", "venom_fangs"],
+    "requiredStage": "social",
+    "statPreview": { "atk": 8, "adp": 3 }
+  },
+  {
+    "id": "mut_synergy_regen_photo",
+    "name": "Solar Regeneration",
+    "description": "Photosynthesis powers accelerated cellular repair.",
+    "rarity": "epic",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["photosynthesis", "regeneration"],
+    "requiredStage": "multicellular",
+    "statPreview": { "adp": 5, "hp": 12 }
+  },
+  {
+    "id": "mut_synergy_pack_carnivore",
+    "name": "Apex Pack",
+    "description": "Pack Hunting and Carnivorous Digestion create coordinated apex predators.",
+    "rarity": "legendary",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["pack_hunting", "carnivorous_digestion"],
+    "requiredStage": "social",
+    "statPreview": { "atk": 7, "spd": 4 }
+  },
+  {
+    "id": "mut_synergy_fins_lateral",
+    "name": "Hydrodynamic Master",
+    "description": "Fins and Lateral Line work in harmony for aquatic dominance.",
+    "rarity": "rare",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["fins", "lateral_line"],
+    "requiredStage": "multicellular",
+    "statPreview": { "spd": 5, "per": 3 }
+  },
+  {
+    "id": "mut_synergy_wings_echo",
+    "name": "Aerial Hunter",
+    "description": "Wings combined with Echolocation creates a deadly flying predator.",
+    "rarity": "legendary",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["wings", "echolocation"],
+    "requiredStage": "landTransition",
+    "statPreview": { "spd": 6, "per": 4, "atk": 3 }
+  },
+  {
+    "id": "mut_synergy_shell_spikes",
+    "name": "Fortress Body",
+    "description": "Shell and Spikes combine into an impenetrable armored fortress.",
+    "rarity": "epic",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["shell", "spikes"],
+    "requiredStage": "multicellular",
+    "statPreview": { "def": 7, "atk": 3 }
+  },
+  {
+    "id": "mut_legendary_electric",
+    "name": "Bioelectric Shock",
+    "description": "Echolocation and poison glands fuse into devastating electric discharge.",
+    "rarity": "legendary",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["echolocation", "poison_gland"],
+    "grantedTraitId": "electric_discharge",
+    "requiredStage": "multicellular",
+    "statPreview": { "atk": 8, "per": 3 }
+  },
+  {
+    "id": "mut_synergy_magnetic_compound",
+    "name": "Electromagnetic Vision",
+    "description": "Compound Eye and Magnetic Sense fuse into multi-spectrum perception.",
+    "rarity": "legendary",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["compound_eye", "magnetic_sense"],
+    "requiredStage": "social",
+    "statPreview": { "per": 9, "adp": 3 }
+  },
+  {
+    "id": "mut_synergy_heat_venom",
+    "name": "Ambush Predator",
+    "description": "Heat Sense and Venom Fangs create an unstoppable ambush predator.",
+    "rarity": "epic",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["heat_sense", "venom_fangs"],
+    "requiredStage": "landTransition",
+    "statPreview": { "atk": 6, "per": 3 }
+  },
+  {
+    "id": "mut_synergy_chemo_regen",
+    "name": "Deep Vent Survivor",
+    "description": "Chemosynthesis and Regeneration create an organism that thrives anywhere.",
+    "rarity": "epic",
+    "type": "synergyUnlock",
+    "requiredTraitIds": ["chemosynthesis", "regeneration"],
+    "requiredStage": "multicellular",
+    "statPreview": { "adp": 7, "hp": 10 }
+  }
+]

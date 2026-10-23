@@ -1,0 +1,322 @@
+[
+  {
+    "id": "cilia",
+    "name": "Cilia",
+    "category": "locomotion",
+    "description": "Hair-like appendages for basic movement through liquid.",
+    "statModifiers": { "spd": 2 },
+    "synergyTraitIds": ["flagellum"],
+    "conflictTraitIds": [],
+    "visualLayer": "locomotion_cilia"
+  },
+  {
+    "id": "flagellum",
+    "name": "Flagellum",
+    "category": "locomotion",
+    "description": "Whip-like tail for rapid propulsion.",
+    "statModifiers": { "spd": 3, "adp": -1 },
+    "synergyTraitIds": ["cilia"],
+    "conflictTraitIds": [],
+    "visualLayer": "locomotion_flagellum"
+  },
+  {
+    "id": "fins",
+    "name": "Fins",
+    "category": "locomotion",
+    "description": "Paired fins grant superior maneuverability in water.",
+    "statModifiers": { "spd": 4, "adp": 2 },
+    "synergyTraitIds": ["flagellum", "lateral_line"],
+    "conflictTraitIds": ["limbs"],
+    "visualLayer": "locomotion_fins"
+  },
+  {
+    "id": "limbs",
+    "name": "Limbs",
+    "category": "locomotion",
+    "description": "Jointed appendages enabling land movement and grasping.",
+    "statModifiers": { "spd": 3, "atk": 2, "adp": 1 },
+    "synergyTraitIds": ["internal_skeleton", "claws"],
+    "conflictTraitIds": ["fins", "cilia"],
+    "visualLayer": "locomotion_limbs"
+  },
+  {
+    "id": "wings",
+    "name": "Wings",
+    "category": "locomotion",
+    "description": "Membrane wings. Enables aerial movement and escape.",
+    "statModifiers": { "spd": 5, "per": 2, "def": -1 },
+    "synergyTraitIds": ["echolocation", "limbs"],
+    "conflictTraitIds": ["shell"],
+    "visualLayer": "locomotion_wings"
+  },
+  {
+    "id": "basic_eye",
+    "name": "Basic Eye",
+    "category": "sensory",
+    "description": "Simple light-detecting organ. Enables basic predator detection.",
+    "statModifiers": { "per": 3 },
+    "synergyTraitIds": ["compound_eye"],
+    "conflictTraitIds": ["echolocation"],
+    "visualLayer": "sensory_eye_basic"
+  },
+  {
+    "id": "compound_eye",
+    "name": "Compound Eye",
+    "category": "sensory",
+    "description": "Multi-faceted eye with 270° vision range.",
+    "statModifiers": { "per": 6, "spd": 1 },
+    "synergyTraitIds": ["carnivorous_digestion", "magnetic_sense"],
+    "conflictTraitIds": [],
+    "visualLayer": "sensory_eye_compound"
+  },
+  {
+    "id": "echolocation",
+    "name": "Echolocation",
+    "category": "sensory",
+    "description": "Sonar-based sensing — powerful in darkness.",
+    "statModifiers": { "per": 5 },
+    "synergyTraitIds": ["poison_gland", "wings"],
+    "conflictTraitIds": ["basic_eye"],
+    "visualLayer": "sensory_echolocation"
+  },
+  {
+    "id": "lateral_line",
+    "name": "Lateral Line",
+    "category": "sensory",
+    "description": "Pressure-sensing organ detecting water vibrations up to 20m away.",
+    "statModifiers": { "per": 3, "spd": 1 },
+    "synergyTraitIds": ["fins", "filter_feeding"],
+    "conflictTraitIds": [],
+    "visualLayer": "sensory_lateral_line"
+  },
+  {
+    "id": "magnetic_sense",
+    "name": "Magnetic Sense",
+    "category": "sensory",
+    "description": "Detects magnetic fields for navigation and prey location.",
+    "statModifiers": { "per": 4, "adp": 2 },
+    "synergyTraitIds": ["compound_eye", "echolocation"],
+    "conflictTraitIds": [],
+    "visualLayer": "sensory_magnetic"
+  },
+  {
+    "id": "heat_sense",
+    "name": "Heat Sense",
+    "category": "sensory",
+    "description": "Pit organs detect infrared radiation. Ideal for hunting in darkness.",
+    "statModifiers": { "per": 3, "atk": 1, "adp": 2 },
+    "synergyTraitIds": ["echolocation", "poison_gland"],
+    "conflictTraitIds": [],
+    "visualLayer": "sensory_heat"
+  },
+  {
+    "id": "tooth_skeleton",
+    "name": "Tooth Skeleton",
+    "category": "structural",
+    "description": "Primitive hardened structures. First step toward a skeleton.",
+    "statModifiers": { "atk": 2, "def": 1 },
+    "synergyTraitIds": ["internal_skeleton"],
+    "conflictTraitIds": [],
+    "visualLayer": "structural_tooth"
+  },
+  {
+    "id": "internal_skeleton",
+    "name": "Internal Skeleton",
+    "category": "structural",
+    "description": "Rigid internal support structure. Enables larger body mass.",
+    "statModifiers": { "def": 3, "hp": 15, "spd": -1 },
+    "synergyTraitIds": ["tooth_skeleton", "limbs"],
+    "conflictTraitIds": ["shell", "exoskeleton"],
+    "visualLayer": "structural_skeleton"
+  },
+  {
+    "id": "exoskeleton",
+    "name": "Exoskeleton",
+    "category": "structural",
+    "description": "Hard external plate armor. Rigid protection at the cost of speed.",
+    "statModifiers": { "def": 6, "hp": 8, "spd": -2 },
+    "synergyTraitIds": ["spikes", "shell"],
+    "conflictTraitIds": ["internal_skeleton", "wings"],
+    "visualLayer": "structural_exoskeleton"
+  },
+  {
+    "id": "shell",
+    "name": "Shell",
+    "category": "defense",
+    "description": "Hard exterior shell. Excellent protection but reduces mobility.",
+    "statModifiers": { "def": 5, "hp": 10, "spd": -2 },
+    "synergyTraitIds": ["spikes"],
+    "conflictTraitIds": ["internal_skeleton", "wings"],
+    "visualLayer": "defense_shell"
+  },
+  {
+    "id": "spikes",
+    "name": "Spikes",
+    "category": "defense",
+    "description": "Sharp protrusions. Deals damage to attackers on contact.",
+    "statModifiers": { "def": 2, "atk": 2 },
+    "synergyTraitIds": ["shell", "exoskeleton"],
+    "conflictTraitIds": [],
+    "visualLayer": "defense_spikes"
+  },
+  {
+    "id": "camouflage",
+    "name": "Camouflage",
+    "category": "defense",
+    "description": "Color-changing cells. Greatly reduces visibility.",
+    "statModifiers": { "def": 1, "per": 2 },
+    "synergyTraitIds": ["pheromone"],
+    "conflictTraitIds": ["bioluminescence"],
+    "visualLayer": "defense_camouflage"
+  },
+  {
+    "id": "regeneration",
+    "name": "Regeneration",
+    "category": "defense",
+    "description": "Rapid cell repair restores HP over time. Effective in recovery.",
+    "statModifiers": { "def": 2, "adp": 4, "hp": 10 },
+    "synergyTraitIds": ["photosynthesis", "filter_feeding"],
+    "conflictTraitIds": [],
+    "visualLayer": "defense_regeneration"
+  },
+  {
+    "id": "spore_release",
+    "name": "Spore Release",
+    "category": "defense",
+    "description": "Defensive cloud of toxic spores disorients attackers.",
+    "statModifiers": { "def": 3, "adp": 3 },
+    "synergyTraitIds": ["acid_spray", "poison_gland"],
+    "conflictTraitIds": [],
+    "visualLayer": "defense_spores"
+  },
+  {
+    "id": "claws",
+    "name": "Claws",
+    "category": "attack",
+    "description": "Rending claws for effective hunting.",
+    "statModifiers": { "atk": 4, "spd": 1 },
+    "synergyTraitIds": ["carnivorous_digestion", "limbs"],
+    "conflictTraitIds": [],
+    "visualLayer": "attack_claws"
+  },
+  {
+    "id": "poison_gland",
+    "name": "Poison Gland",
+    "category": "attack",
+    "description": "Secretes toxins. Poisons prey on contact.",
+    "statModifiers": { "atk": 3, "adp": 1 },
+    "synergyTraitIds": ["echolocation", "heat_sense"],
+    "conflictTraitIds": [],
+    "visualLayer": "attack_poison"
+  },
+  {
+    "id": "acid_spray",
+    "name": "Acid Spray",
+    "category": "attack",
+    "description": "Ranged acid attack. Dissolves armor.",
+    "statModifiers": { "atk": 4 },
+    "synergyTraitIds": ["spore_release"],
+    "conflictTraitIds": [],
+    "visualLayer": "attack_acid"
+  },
+  {
+    "id": "venom_fangs",
+    "name": "Venom Fangs",
+    "category": "attack",
+    "description": "Delivers fast-acting venom through hollow fangs.",
+    "statModifiers": { "atk": 5, "spd": 1, "adp": 1 },
+    "synergyTraitIds": ["claws", "poison_gland"],
+    "conflictTraitIds": [],
+    "visualLayer": "attack_venom_fangs"
+  },
+  {
+    "id": "electric_discharge",
+    "name": "Electric Discharge",
+    "category": "attack",
+    "description": "Bio-electric shock wave stuns and damages nearby targets.",
+    "statModifiers": { "atk": 5, "per": 2, "adp": 2 },
+    "synergyTraitIds": ["lateral_line", "magnetic_sense"],
+    "conflictTraitIds": [],
+    "visualLayer": "attack_electric"
+  },
+  {
+    "id": "photosynthesis",
+    "name": "Photosynthesis",
+    "category": "metabolic",
+    "description": "Converts sunlight to energy. Reduces food dependency in daytime.",
+    "statModifiers": { "adp": 3 },
+    "synergyTraitIds": ["regeneration"],
+    "conflictTraitIds": ["carnivorous_digestion"],
+    "visualLayer": "metabolic_photosynthesis"
+  },
+  {
+    "id": "filter_feeding",
+    "name": "Filter Feeding",
+    "category": "metabolic",
+    "description": "Absorbs nutrients from water. Efficient in aquatic biomes.",
+    "statModifiers": { "adp": 2, "spd": -1 },
+    "synergyTraitIds": ["lateral_line", "regeneration"],
+    "conflictTraitIds": [],
+    "visualLayer": "metabolic_filter"
+  },
+  {
+    "id": "carnivorous_digestion",
+    "name": "Carnivorous Digestion",
+    "category": "metabolic",
+    "description": "Highly efficient protein digestion from prey.",
+    "statModifiers": { "hp": 8, "atk": 1 },
+    "synergyTraitIds": ["compound_eye", "claws"],
+    "conflictTraitIds": ["photosynthesis"],
+    "visualLayer": "metabolic_carnivore"
+  },
+  {
+    "id": "chemosynthesis",
+    "name": "Chemosynthesis",
+    "category": "metabolic",
+    "description": "Derives energy from mineral oxidation. Thrives near thermal vents.",
+    "statModifiers": { "adp": 5, "def": 1 },
+    "synergyTraitIds": ["filter_feeding"],
+    "conflictTraitIds": ["photosynthesis"],
+    "visualLayer": "metabolic_chemo"
+  },
+  {
+    "id": "herd_instinct",
+    "name": "Herd Instinct",
+    "category": "social",
+    "description": "Safety in numbers. Reduces predator encounter chance.",
+    "statModifiers": { "per": 2, "def": 1 },
+    "synergyTraitIds": ["bioluminescence", "pheromone", "pack_hunting"],
+    "conflictTraitIds": [],
+    "visualLayer": "social_herd"
+  },
+  {
+    "id": "bioluminescence",
+    "name": "Bioluminescence",
+    "category": "social",
+    "description": "Emits light for communication. Advantage in dark biomes.",
+    "statModifiers": { "per": 3 },
+    "synergyTraitIds": ["herd_instinct"],
+    "conflictTraitIds": ["camouflage"],
+    "visualLayer": "social_bioluminescence"
+  },
+  {
+    "id": "pheromone",
+    "name": "Pheromone",
+    "category": "social",
+    "description": "Chemical signals for communication. Enables symbiosis encounters.",
+    "statModifiers": { "per": 2, "adp": 1 },
+    "synergyTraitIds": ["herd_instinct", "camouflage"],
+    "conflictTraitIds": [],
+    "visualLayer": "social_pheromone"
+  },
+  {
+    "id": "pack_hunting",
+    "name": "Pack Hunting",
+    "category": "social",
+    "description": "Coordinates attacks with others. Dramatically boosts hunting success.",
+    "statModifiers": { "atk": 4, "spd": 2 },
+    "synergyTraitIds": ["herd_instinct", "carnivorous_digestion"],
+    "conflictTraitIds": [],
+    "visualLayer": "social_pack"
+  }
+]
